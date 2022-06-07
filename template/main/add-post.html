@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+{% load crispy_forms_filters %}
+{% block content %}
+<div class="container">
+    <form method="POST" action="{% url 'main:add-post' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy}}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

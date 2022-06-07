@@ -1,0 +1,10 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<img src="{{ post.image.url}}" alt="{{ post.subject }}" class="post-img img-fluid" />
+<h1>{{ post.subject }}</h1>
+<div>
+    {{ post.content }}
+</div>
+
+{% endblock %}
